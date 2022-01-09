@@ -40,10 +40,10 @@ header {
 .container {
     width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 20px;
+    /* padding: 0 20px; */
+    /* padding-top: 20px; */
     display: flex;
-    background-color: aqua;
+    border: 0px;
 }
 
 .header {
@@ -176,4 +176,84 @@ a {
 
 span {
     padding: 0;
+}
+
+.hero {
+    width: 1440px;
+    height: 910px;
+    background-image: url('./assets/img/bg.jpg');
+    background-position: center -90px;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.hero-text {
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 40px;
+color: #FFFFFF;
+margin: 0 auto;
+}
+
+.mybutton {
+    border: 0;
+    background: #BDAE82;
+    border-radius: 0px;
+    height: 55px;
+    width: 220px;
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 40px;
+text-align: center;
+color: #000000;
+
+
+padding: 0;
+
+
+}
+
+.name {
+    width: 580px;
+    height: 280px;
+    padding-left: 80px;
+    padding-top: 160px;
+}
+
+.hero-text {
+   width: 550px;
+   height: 130px;
+ padding-top: 10px;
+ padding-left: 80px;
+ font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 40px;
+color: #FFFFFF;
+margin: 0;
+}
+
+.hero-text span {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.hero-button {
+  width: 300px;
+  height: 80px; 
+  padding-left: 80px;
+padding-top: 25px; 
 }
