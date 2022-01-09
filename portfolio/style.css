@@ -22,8 +22,8 @@
 
 html {
     scroll-behavior: smooth;
-    /*margin: 0;
-    /* padding: 0;8*/
+    /* margin: 0; */
+    /* padding: 0; */
     
 }
 
@@ -40,14 +40,20 @@ header {
 .container {
     width: 1440px;
     margin: 0 auto;
-    /* padding: 0 20px; */
-    /* padding-top: 20px; */
+     /* padding: 0 20px;  */
+     /* padding-top: 20px; */
     display: flex;
     border: 0px;
+    /* flex-direction: column; */
+    /* flex-wrap: nowrap; */
 }
 
+.basic-sections {
+     flex-direction: column;
+    flex-wrap: nowrap;
+}
 .header {
-    display: block;
+    display: block; 
     flex-direction: row;
     /*height: 50px;
     width: 50px;*/
@@ -180,7 +186,7 @@ span {
 
 .hero {
     width: 1440px;
-    height: 910px;
+    height: 820px;
     background-image: url('./assets/img/bg.jpg');
     background-position: center -90px;
     background-repeat: no-repeat;
@@ -256,4 +262,134 @@ margin: 0;
   height: 80px; 
   padding-left: 80px;
 padding-top: 25px; 
+}
+section {
+   
+}
+
+.skills {
+    width: 1440px;
+    height: 482px;
+    background-color: #000000;
+   
+}
+
+.section-title {
+    font-family: Merriweather;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 80px;
+text-align: center;
+color: #BDAE82;
+padding-top: 100px;
+width: 700px;
+height: 180px;
+margin: 0 auto;
+
+}
+
+.wrap ::after, 
+.wrap ::before {
+    content: " ";
+    position: absolute;
+    background: #BDAE82;
+    width: 900px;
+    height: 2px;
+    top: 140px;
+    width: 50%;
+    
+}
+ .wrap {
+    position: relative;
+    overflow-x: hidden;
+    width: 700px;
+    height: 180px;
+    margin: 0 auto;
+ }
+ .wrap ::after {
+    margin-right: -50%;
+
+ }
+
+ .wrap ::before {
+    margin-left: -50%;
+ }
+
+ .skills-item {
+     width: 1440px;
+     height: 242px;
+     margin: 0 auto;
+     padding-left: 20px;
+     padding-right: 20px;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     background-position: center top;
+     padding-top: 60px;
+ }
+
+ .skills-photo,
+ .skills-video,
+ .skills-retouch,
+ .skills-audio {
+    width: 320px;
+    height: 240px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+
+ }
+
+ .skills-wrap {
+     /* padding-left: 20px; */
+     padding-top: 100px;
+     width: 320px;
+     height: 240px;
+ }
+
+ .skills-photo {
+     background-image: url('./assets/svg/camera 1.svg');
+     background-size: 62px 50px;
+     background-position: top center;
+     background-repeat: no-repeat;
+ }
+
+ .skills-video {
+     background-image: url('./assets/svg/video 1.svg');
+     background-size: 62px 50px;
+     background-position: top center;
+     background-repeat: no-repeat;
+ }
+ .skills-retouch {
+    background-image: url('./assets/svg/image 1.svg');
+    background-size: 62px 50px;
+    background-position: top center;
+     background-repeat: no-repeat;
+}
+.skills-audio {
+    background-image: url('./assets/svg/mic 1.svg');
+    background-size: 62px 50px;
+    background-position: top center;
+     background-repeat: no-repeat;
+}
+
+.skills-name {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.skills-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
 }
