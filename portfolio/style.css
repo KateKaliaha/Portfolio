@@ -78,7 +78,7 @@ header {
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 
 }
 
@@ -109,34 +109,20 @@ header {
 .nav-list {
     display: flex;
     list-style: none;
-    text-align: left;
+    text-align: center;
+    /* width: 100%; */
 }
 
 .nav-item {
-    /*width: 20%;*/
+    /* width: 20%; */
     padding-right: 30px;
     text-align: center;
 }
 
 #first-item {
     padding-left: 30px;
-    width: 21,8%;
 }
 
-#second-item {
-    width: 22,2%;
-}
-
-#third-item {
-    width: 17%;
-}
-
-#fourth-item {
-    width: 15,6%;
-}
-#last-item {
-    width: 23,2%;
-}
 
 .nav-link {
    /*padding: 0px 30px;*/
@@ -149,6 +135,7 @@ header {
     cursor: pointer;
     color: #FFFFFF;
     text-decoration: none;
+    text-align: center;
     /*padding-top: 20px;*/
 }
 
@@ -177,11 +164,16 @@ a {
     display: inline;
     padding-right: 20px;
     padding-bottom: 20px;
+    text-align: center;
     
 }
 
 span {
     padding: 0;
+}
+
+.lng {
+    color: #BDAE82;
 }
 
 .hero {
@@ -296,7 +288,7 @@ margin: 0 auto;
     background: #BDAE82;
     width: 900px;
     height: 2px;
-    top: 140px;
+    top: 139px;
     width: 50%;
     
 }
@@ -318,7 +310,7 @@ margin: 0 auto;
 
  .skills-item {
      width: 1440px;
-     height: 242px;
+     height: 302px;
      margin: 0 auto;
      padding-left: 20px;
      padding-right: 20px;
@@ -361,21 +353,21 @@ margin: 0 auto;
 
  .skills-video {
      background-image: url('./assets/svg/video 1.svg');
-     background-size: 62px 50px;
+     background-size: 60px 50px;
      background-position: top center;
      background-repeat: no-repeat;
  }
  .skills-retouch {
     background-image: url('./assets/svg/image 1.svg');
-    background-size: 62px 50px;
+    background-size: 66px 50px;
     background-position: top center;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 .skills-audio {
     background-image: url('./assets/svg/mic 1.svg');
-    background-size: 62px 50px;
+    background-size: 32px 50px;
     background-position: top center;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 .skills-name {
