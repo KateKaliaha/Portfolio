@@ -1004,7 +1004,6 @@ button {
    .container
      {
         max-width: 768px;
-        /* width: 51,9%; */
     }
 
 
@@ -1021,14 +1020,12 @@ button {
 
     .switch-lng {
         margin-left: auto;
-    /* padding-top: 20px; */
     padding-right: 0;
     width: 102px;
     }
     .switch-lng span {
         width: 26px;
         padding-right: 18px;
-        /* padding-left: 9px; */
     }
 
     .switch-en {
@@ -1036,18 +1033,16 @@ button {
         width: 34px;
     }
     .switch-ru {
-        /* padding-left: 4px; */
         width: 42px;
         padding-right: 20px;
     }
+
     .burger {
-        /* display: block; */
         padding-left: 0;
         padding-right: 64px;
         padding-top: 20px;
         width: 114px;
     height: 70px;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1055,6 +1050,7 @@ button {
     border: 0;
     cursor: pointer;
     }
+
     .main-header {
         height: 90px;
         background-position: -7px -30px;
@@ -1069,11 +1065,11 @@ button {
 
     .name {
         width: 225px;
-        /* padding-right: 60px; */
         height: 142px;
         padding-top: 78px;
         padding-left: 60px;
     }
+
     h1 {
         font-family: Merriweather;
 font-style: normal;
@@ -1097,7 +1093,6 @@ color: #FFFFFF;
     }
 
     .hero-text span {
-        /* padding-top: 0; */
         height: 72px;
     }
 
@@ -1117,6 +1112,14 @@ text-align: center;
 color: #BDAE82;
 height: 160px;
 width: 364px;
+    }
+
+    .title-skills {
+        padding-top: 100px;
+    }
+    .wrap-title-skills ::before,
+    .wrap-title-skills ::after {
+        top: 120px;
     }
 
     .wrap {
@@ -1245,6 +1248,9 @@ height: 44px;
 .second-block {
     margin-top: 3px;
 }
+.video {
+    height: 628px;
+}
 .title-video {
     padding-top: 78px;
 }
@@ -1253,4 +1259,101 @@ height: 44px;
     .wrap-title-video ::after {
         top: 96px;
     }
+    .video-wrap {
+        padding-top: 27px;
+        padding-left: 0;
+        padding-right: 0;
+        height: 418px;
+    }
+
+    .video-player {
+            height: 418px;
+            background: url('./assets/img/video-player-little.jpg');
+  background-repeat: no-repeat;
+    background-position: center 0;
+    }
+    .video-button {
+        width: 75px;
+        height: 75px;
+        background-position: 2px 5px;
+        background-size: auto 65px;
+        background-repeat: no-repeat;
+        left: 348px;
+    }
+    .price {
+        padding-bottom: 30px;
+    }
+
+    .title-price {
+        padding-top: 78px;
+    }
+    
+    .wrap-price ::before,
+        .wrap-price ::after {
+            top: 96px;
+        }
+
+        .price-items {
+            padding-top: 27px;
+            padding-left: 20px;
+            justify-content: center;
+        }
+        .price-item {
+            width: 420px;
+            margin-bottom: 50px;
+        }
+        .contacts {
+            margin: 0;
+            justify-content: center;
+            height: 600px;
+        background-position: -234px 0px;
+        background-size: auto 601px;
+        }
+
+        .contacts-container {
+            width: 450px;
+            height: 429px;
+            /* padding-top: 60px; */
+            padding-right: 0;
+        }
+        #contact-title {
+            padding-top: 72px;
+            text-align: center;
+            padding-bottom: 51px;
+        }
+        .contacts-button {
+            display: flex;
+            justify-content: center;
+        
+        }
+        .footer-section {
+            flex-direction: column;
+            padding-top: 15px;
+            /* justify-content: center; */
+            font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+align-items: center;
+        }
+        .footer-data {
+            width: 210px;
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 17px;
+            padding-top: 10px;
+            height: 37px;
+        }
+
+        .footer-block {
+            padding-left: 4px;
+            height: 62px;
+           display: flex;
+           text-align: start;
+           padding-bottom: 20px;
+           padding-top: 2px;
+        }
 }
