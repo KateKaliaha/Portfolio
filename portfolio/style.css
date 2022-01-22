@@ -1001,12 +1001,36 @@ button {
     transition: 0.3s;
 }
 
+@media (max-width: 1300px) {
+    .portfolio-items {
+        justify-content: center;
+    }
+    .photo {
+        display: flex;
+        justify-content: center;
+        width: 980px;
+        flex-direction: column;
+      padding-left: 265px;
+    }
+    
+    .first-block,
+    .second-block {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 700px;
+    }
+    .video-button {
+        left: 314px;
+    }
+}
+
 @media (max-width: 768px) {
    .container
      {
         max-width: 768px;
     }
-
 
     .logo {
         padding-left: 60px;
@@ -1051,6 +1075,7 @@ button {
     border: 0;
     cursor: pointer;
     }
+
     .burger_item,
     .burger_item::after,
     .burger_item::before {
@@ -1156,12 +1181,8 @@ width: 364px;
 .skills-audio {
     display: flex;
     flex-wrap: wrap;
-    /* width: 50%; */
-    /* justify-content: space-around; */
-    /* width: 300px; */
-    /* height: 224px; */
-    /* padding-left: 20px; */
 }
+
 .skills-wrap {
 padding-right: 44px;
 padding-top: 0;
@@ -1202,25 +1223,20 @@ padding-left: 40px;
     .portfolio-button {
         padding-top: 42px;
     }
-/* #skills-retouch,
-#wrap-retouch {
-    padding-top: 20px;
-} */
-.skills-text {
-   
+
+.skills-text {  
 font-family: Inter;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 22px;
 text-align: center;
-
 color: #FFFFFF;
 padding-left: 20px;
 width: 300px;
 height: 44px;
-
 }
+
 .photo {
     display: flex;
     justify-content: center;
@@ -1363,4 +1379,239 @@ align-items: center;
            padding-bottom: 20px;
            padding-top: 2px;
         }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 468px;
+    }
+    .main-header {
+        height: 90px;
+        background-position: -7px 0px;
+        background-size: auto 395px;
+    }
+
+    .hero {
+        height: 314px;
+        background-position: -7px -90px;
+        background-size: auto 395px;
+    }
+    .name {
+        padding-top: 60px;
+    }
+    h1 {
+font-size: 20px;
+line-height: 40px;
+color: #FFFFFF;
+    }
+
+    .hero-text {
+        width: 450px;
+        height: 100px;
+        font-size: 18px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding-top: 0;
+    }
+
+    .hero-text span {
+        height: 72px;
+    }
+
+    .hero-button {
+        padding-top: 0;
+        padding-left: 60px;
+    }
+    
+    h1 {
+        font-family: Merriweather;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 64px;
+color: #FFFFFF;
+    }
+
+    .hero-text {
+        padding-top: 20px;
+        padding-left: 60px;
+        width: 470px;
+        height: 92px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .hero-text span {
+        height: 72px;
+    }
+
+    .hero-button {
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+    .section-title {
+        width: 300px;
+        height: 100px;
+    }
+
+    .title-skills {
+        padding-top: 50px;
+    }
+    .wrap ::before,
+    .wrap ::after {
+        top: 69px;
+    }
+    .skills-item {
+        padding-top: 0;
+        padding-left: 71px;
+    }
+    .title-portfolio {
+        padding-top: 11px;
+    }
+    .wrap-portfolio ::before,
+    .wrap-portfolio ::after {
+        top: 30px;
+    }
+    .portfolio-button {
+        padding-top: 0px;
+    }
+
+    .portfolio-items {
+        padding-top: 20px;
+    }
+    .title-video {
+        padding-top: 48px;
+    }
+    .video-wrap {
+        padding-top: 0px;
+    }
+    .video-button {
+        left: 215px;
+    }  
+    .title-price {
+        padding-top: 47px;
+    }
+    .price-items {
+        padding-top: 0px;
+    }  
+    .photo {
+        width: 445px;
+        padding-left: 0;
+    }
+    
+    .first-block,
+    .second-block {
+        width: 445px;
+    }
+}
+@media (max-width: 479px) {
+    .container {
+        width: 320px;
+    }
+    .logo {
+        padding-left: 24px;
+    }
+    .main-header {
+        background-size: auto 300px;
+    }
+
+    .hero {
+        background-size: auto 300px;
+        height: 214px;
+    }
+    .wrap {
+        width: 320px;
+        height: 125px;
+    }
+.wrap-portfolio,
+    .title-portfolio {
+        height: 60px;
+    }
+    .wrap-portfolio {
+        padding-left: 20px;
+    }
+    .name {
+        padding-top: 0px;
+        height: 30px;
+    }
+    .hero-text {
+        padding-top: 30px;
+        padding-left: 10px;
+        width: 320px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .skills-item {
+        padding-left: 0px;
+        padding-bottom: 0;
+    }
+    .wrap-portfolio {
+        padding-left: 0px;
+    }
+    .portfolio-button {
+        width: 320px;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+    .portfolio-items {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .photo {
+        width: 320px;
+        padding-left: 0;
+    }
+    
+    .first-block,
+    .second-block {
+        width: 320px;
+    }
+    .picture {
+        width: 320px;
+        height: 420px;
+    }
+    .title-video {
+        padding-top: 20px;
+    }
+    .wrap-title-video ::before, 
+    .wrap-title-video ::after {
+        top: 41px;
+    }
+    .wrap-title-video {
+        height: 100px;
+    }
+    .video-player {
+        background-position: -114px -4px;
+        background-size: auto 420px;
+    }
+    .video-button {
+        left: 123px;
+    }
+    .video {
+        height: 518px;
+    }
+    .price-item {
+        width: 320px;
+        margin-bottom: 30px;
+    }
+    .contacts-container {
+        width: 320px;
+    }
+    #contact-title {
+        padding-top: 31px;
+        padding-bottom: 24px;
+        width: 320px;
+    }
+
+    .contacts-email,
+    .textarea,
+    .price-block,
+    .price-description,
+    .price-button {
+        width: 320px;
+    }
 }
