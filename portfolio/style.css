@@ -28,6 +28,7 @@ html {
 body {
     font-family: 'Inter';  
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -1050,6 +1051,11 @@ button {
     border: 0;
     cursor: pointer;
     }
+    .burger_item,
+    .burger_item::after,
+    .burger_item::before {
+        display: flex;
+    }
 
     .main-header {
         height: 90px;
@@ -1229,6 +1235,7 @@ height: 44px;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    width: 560px;
     /* width: 760px; */
 }
 
