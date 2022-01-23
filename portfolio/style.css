@@ -1041,13 +1041,43 @@ button {
         width: 700px;
     }
     .video-button {
-        left: 314px;
+        left: 450px;
     }
 }
-
+@media (max-width: 1024px) {
+    .portfolio-button {
+        padding-left: 90px;
+    }
+}
 @media (max-width: 950px) {
-   .container
-     {
+    .container {
+max-width: 769px;
+    }
+    .photo {
+        width: 769px;
+        padding-left: 129px;
+    }
+    .portfolio-button {
+        /* width: 769px;
+        padding-left: 99px;
+        width: 90%;  */
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: space-between;
+            padding-left: 161px;
+            padding-right: 160px;
+
+}
+.first-block, .second-block {
+    width: 658px;
+}
+.price-items {
+   justify-content: center;
+
+}
+}
+@media (max-width: 768px) {
+   .container {
         max-width: 768px;
     }
 
@@ -1364,13 +1394,13 @@ height: 44px;
     /* width: 760px; */
 }
 
-.portfolio-button {
+/* .portfolio-button {
     display: flex;
     flex-wrap: wrap;
    justify-content: space-between;
     padding-left: 161px;
     padding-right: 160px;
-}
+} */
 .picture {
     margin-bottom: 24px;
 }
@@ -1490,7 +1520,8 @@ align-items: center;
         }
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 680px) {
     .container {
         width: 468px;
     }
@@ -1630,7 +1661,15 @@ color: #FFFFFF;
         width: 445px;
     }
 }
-@media (max-width: 479px) {
+@media (max-width: 619px) {
+    .list{
+        width: 100%;
+}
+.nav {
+    width: 151px;
+}
+}
+@media (max-width: 400px) {
     .container {
         width: 320px;
     }
