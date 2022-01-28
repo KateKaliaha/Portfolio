@@ -546,17 +546,21 @@ margin: 0 auto;
     color: #BDAE82;
     padding-right: 5px;
 }
+.active {
+    color: #000;
+    background-color: #bdae82;
+  }
 
-.mysecondbutton:hover,
-.mysecondbutton:active,
-.mysecondbutton:focus {
-    color: #FFFFFF;
+
+.active:active,
+.active:focus {
+    color: #000000;
 }
 
 #last {
     height: 55px;
     width: 220px;
-    background: #BDAE82;
+    /* background: #BDAE82;  */
     border: 2px solid #BDAE82;
     box-sizing: border-box;
     border-radius: 0px;
@@ -566,12 +570,15 @@ margin: 0 auto;
     font-size: 20px;
     line-height: 40px;
     text-align: center;
-    color: #000000;
+    /* color: #000000; */
 }
 
-#last:hover,
-#last:active,
-#last:focus {
+mysecondbutton:hover 
+.mysecondbutton:focus{
+    color: #FFFFFF;
+}
+
+.active:hover {
     color: #FFFFFF;
 }
 .portfolio-items {
