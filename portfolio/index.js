@@ -82,16 +82,17 @@ if (localStorage.getItem('lang') != null) {
 const switchBtn = document.querySelector('.theme-switch');
 const switchTheme = document.querySelectorAll('[data-theme]');
 
-const theme = 'light-theme';
+
 switchBtn.addEventListener('click', () => {
   switchTheme.forEach((element) => element.classList.toggle('light-theme'));
   localStorage.setItem('theme', theme);
 });
 
+// const theme = 'light-theme';
+// if (localStorage.getItem('theme') != null) {
+//   let theme = localStorage.getItem('theme');
+//   switchTheme.forEach((element) => element.classList.toggle(theme));
+// };
 
-if (localStorage.getItem('theme') != null) {
-  let theme = localStorage.getItem('theme');
-  switchTheme.forEach((element) => element.classList.toggle(theme));
-}
 
 
