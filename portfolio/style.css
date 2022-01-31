@@ -52,6 +52,7 @@ header {
 .header {
     display: block; 
     flex-direction: row;
+   
 }
 
 .main-header {
@@ -60,6 +61,8 @@ header {
     background: url('./assets/img/bg.jpg');
     background-repeat: no-repeat;
     background-position: center 0;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -85,7 +88,7 @@ header {
 .nav {
     margin-left: auto;
     padding-top: 20px;
-    width: 500px;
+    /* width: 500px; */
     height: 90px;
     padding-bottom: 20px;
 }
@@ -149,6 +152,7 @@ a {
 .nav a:hover {
     color:#BDAE82;
 }
+ 
 
 .menu-burger {
     display: none;
@@ -180,34 +184,15 @@ a {
     transition: 0.5s;
 } 
 
+.light-theme.list {
+    background-color: transparent;
+    /* color: #000000; */
+} 
 
 
-
-
-/* .burger_item::after { */
-    /* bottom: -13px; */
-/* } */
-
-/* .burger_item::before {
-    top: -13px;
-} */
-/* .burger.open span::before {
-    transform: translate(15px, 3px) rotate(45deg);
-    transform-origin: left top;
-  } */
-  
-  /* .burger.open span {
-    /* opacity: 0; */
-    /* transform: scale(0); */
-  /* }  */
-  
-  /* .burger.open span::after {
-    transform: translate(-6px, -45px) rotate(-45deg);
-  transform-origin: right bottom;
-  } */
 .switch-lng {
     height: 90px;
-    width: 70px;
+    /* width: 70px; */
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
@@ -223,20 +208,20 @@ a {
 
 .switch-lng {
     overflow: hidden;
-    width: 90px;
+    /* width: 90px; */
     height: 90px;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
     padding-right: 20px;
+    justify-content: space-around;
 }
 
-.switch-en,
-.switch-ru {
+.switchs {
     display: flex;
     flex-direction: row;
-    width: 25px;
+    /* width: 25px; */
     height: 90px;
 }
 
@@ -245,15 +230,16 @@ a {
     padding-right: 10px;
 }
 
-.switch-en input[type=radio],
-.switch-ru input[type=radio] {
+.switch-en
+.switch-ru {
     display: none;
     margin: 0;
     padding: 0;
 }
-
-.switch-en label,
-.switch-ru label {
+#en {
+    /* padding-right: 20px; */
+}
+.switchs {
     display: inline-block;
     cursor: pointer;
     user-select: none;
@@ -267,17 +253,22 @@ a {
     color: #FFFFFF;
     padding-top: 20px;
     display: inline;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     padding-bottom: 20px;
     text-align: center;
 }
-
+.active.switchs {
+    color: #BDAE82;
+}
+.active.switchs:hover {
+    color: #BDAE82;
+}
 .switch-lng span {
     padding: 0;
     align-items: center;
     width: 8px;
     height: 90px;
-    padding-right: 18px;
+    /* padding-right: 18px; */
     padding-bottom: 20px;
     text-align: center;
     padding-top: 20px;
@@ -289,16 +280,38 @@ a {
     color: #FFFFFF;
 }
 
-.switch-en label {
+.theme-switch {
+    background: url("assets/svg/Moon.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 45px;
+    height: 45px;
+   margin-top: 20px;
+   margin-right: 20px;
+}
+.theme-switch:hover {
+    filter: invert(7%) sepia(17%) saturate(839%) hue-rotate(340deg) brightness(81%) contrast(78%);
+}
+
+.switchs:active,
+.switchs:focus,
+.switchs:hover {
     color: #BDAE82;
-    padding-right: 20px;
+} 
+.switchs,
+.switchs.active {
+    /* color: #BDAE82;  */
+    /* padding-right: 20px; */
+    outline: none; 
+  border: 0;
+  background: transparent;
+}
+.switchs.active:active {
+    color: #BDAE82;
 }
 
-#ru {
-    padding-right: 20px;
-}
-
-.switch-ru input[type=radio]:hover + label {
+.switch-lng:hover,
+.switch-lng:focus {
     color: #BDAE82;
 }
 
@@ -345,6 +358,8 @@ h1 {
     color: #000000;
     padding: 0;
     cursor: pointer;
+    /* overflow: hidden;
+    position: relative; */
 }
 
 .mybutton:hover,
@@ -546,17 +561,24 @@ margin: 0 auto;
     color: #BDAE82;
     padding-right: 5px;
 }
+.active {
+    color: #000000;
+    background-color: #bdae82;
+  }
 
-.mysecondbutton:hover,
-.mysecondbutton:active,
-.mysecondbutton:focus {
+
+.active.mysecondbutton:active,
+.active.mysecondbutton:focus {
+    color: #000000;
+} 
+.active.mysecondbutton:hover {
     color: #FFFFFF;
-}
+} 
 
 #last {
     height: 55px;
     width: 220px;
-    background: #BDAE82;
+    /* background: #BDAE82;  */
     border: 2px solid #BDAE82;
     box-sizing: border-box;
     border-radius: 0px;
@@ -566,12 +588,15 @@ margin: 0 auto;
     font-size: 20px;
     line-height: 40px;
     text-align: center;
-    color: #000000;
+    /* color: #000000; */
 }
 
-#last:hover,
-#last:active,
-#last:focus {
+.mysecondbutton:hover 
+.mysecondbutton:focus{
+    color: #FFFFFF;
+}
+
+.active:hover {
     color: #FFFFFF;
 }
 .portfolio-items {
@@ -931,7 +956,7 @@ outline: 0;
  }
 
  .footer {
-     /* max-width: 1440px; */
+     max-width: 1440px; 
      height: 150px;
      background: #000000;
      margin: 0 auto;
@@ -1058,9 +1083,6 @@ max-width: 769px;
         padding-left: 129px;
     }
     .portfolio-button {
-        /* width: 769px;
-        padding-left: 99px;
-        width: 90%;  */
             display: flex;
             flex-wrap: wrap;
            justify-content: space-between;
@@ -1075,6 +1097,9 @@ max-width: 769px;
    justify-content: center;
 
 }
+.switch-lng {
+    padding-right: 0;
+}
 }
 @media (max-width: 768px) {
    .container {
@@ -1085,13 +1110,18 @@ max-width: 769px;
         padding-left: 60px;
        width: 110px;
     }
+    .light-theme.list {
+        background-color: #FFFFFF;
+        color: #000000; 
+    } 
+    .light-theme.list a {
+        color: #000000; 
+    } 
 
-    /* .nav,
-    .list,
-    .nav-list {
-        display: none;
-    } */
-
+    .light-theme.close-line {
+        background: #000000;
+    }
+    
     .switch-lng {
         margin-left: auto;
     padding-right: 0;
@@ -1102,16 +1132,13 @@ max-width: 769px;
         padding-right: 18px;
     }
 
-    .switch-en {
-        padding-right: 9px; 
-        width: 34px;
+    .theme-switch {
+        width: 55px;
+        margin-right: 10px;
     }
-    .switch-ru {
-        width: 42px;
-        padding-right: 20px;
+    .switch-lng span {
+    padding-right: 0px;
     }
-
-    
         .menu-burger {
             display: block;
             width: 50px;
@@ -1121,7 +1148,8 @@ max-width: 769px;
     
         .menu-burger {
             padding-left: 0;
-            padding-right: 64px;
+            padding-right: 45px;
+            padding-left: 20px;
             padding-top: 20px;
             width: 114px;
         height: 70px;
@@ -1398,13 +1426,6 @@ height: 44px;
     /* width: 760px; */
 }
 
-/* .portfolio-button {
-    display: flex;
-    flex-wrap: wrap;
-   justify-content: space-between;
-    padding-left: 161px;
-    padding-right: 160px;
-} */
 .picture {
     margin-bottom: 24px;
 }
@@ -1541,13 +1562,7 @@ align-items: center;
     .nav {
         width: 100px;
     }
-    /* .nav-link {
-        font-size: 20px;
-    }
-    .list {
-        padding-top: 55px;
-    padding-left: 106px;
-    } */
+   
     .hero {
         height: 314px;
         background-position: -7px -90px;
@@ -1685,11 +1700,13 @@ color: #FFFFFF;
     }
     .menu-burger {
         width: 80px;
-        padding-right: 30px;
+        padding-right: 5px;
+        padding-left: 10px;
     }
-    /* .list {
-        padding-left: 60px;
-    } */
+    .theme-switch {
+        width: 100px;
+    }
+   
     .main-header {
         background-size: auto 300px;
     }
@@ -1791,3 +1808,79 @@ color: #FFFFFF;
     }
 }
 
+.light-theme {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.light-theme.theme-switch {
+    background: url('assets/svg/carbon_sun.svg');
+    background-repeat: no-repeat;
+}
+
+.light-theme.mysecondbutton:hover {
+    background: #BDAE82;
+    color: #FFFFFF;
+}
+.light-theme.mysecondbutton.active {
+    background: #BDAE82;
+    color: #FFFFFF;
+}
+
+.light-theme.wrap ::before,
+.light-theme.wrap ::after {
+    background: #000000;
+}
+.light-theme.switch-lng:hover,
+.light-theme.switch-lng:focus {
+    color: #BDAE82;
+}
+.light-theme.switchs {
+    color: #FFFFFF;
+}
+.light-theme html {
+    background: #FFFFFF;
+}
+
+.mybutton:hover,
+.mybutton:focus,
+.contact-button:hover,
+.contact-button:focus {
+	box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+@keyframes pulse {
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
+.mysecondbutton:hover, 
+.mysecondbutton:focus,
+.my-price-button:hover,
+.my-price-button:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em #e2ac17;
+	transform: translatey(-0.65em);
+}
+
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+
+.video-button:hover,
+.switchs:hover {
+	animation: bounce 1s;
+}
