@@ -1,4 +1,4 @@
-
+// import i18Obj from "./js/translate.js";
  (function () {
     const burgerButton = document.querySelector('.burger');
     const menu = document.querySelector('.list');
@@ -25,33 +25,73 @@
  const portfolioBtn = document.querySelectorAll('.mysecondbutton');
  const portfolioImages = document.querySelectorAll('.picture');
  const portfolioBtns = document.querySelector('.portfolio-button');
+
  
  function changeImage(event) {
      if (event.target.classList.contains('mysecondbutton')) {
         const season = event.target.dataset.season;
         portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
-     }
+       
+     };
+    
     };
-     
 
- 
    portfolioBtns.addEventListener("click", changeImage);
 
+   function changeButton(event) {
+    portfolioBtn.forEach((btn) => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    portfolioBtns.classList.remove('active');
+    saveLocalStorage(season, 'season')
+   }
+portfolioBtns.addEventListener('click', changeButton);
+
+
+import i18Obj from "./translate.js";
+const lngButton = document.querySelectorAll('.switchs');
+const lngEn = document.getElementById('en');
+const lngRu = document.getElementById('ru');
+const text = document.querySelectorAll('[data-i18]');
+const lngButtons = document.querySelector('.switch-lng')
 
 
 
+function getTranslate(lang) {
+  text.forEach((element) => {
+    element.textContent = i18Obj[lang][element.dataset.i18];
+  });
+  localStorage.setItem('lang', lang);
+}
+ 
+lngRu.addEventListener('click', () => getTranslate('ru'));
+lngEn.addEventListener('click', () => getTranslate('en'));
 
-var button = document.getElementsByClassName("mysecondbutton");
-var actives = document.getElementsByClassName('active');
-for (i = 0; button.length > i; i++) {
-  button[i].onclick = function() {
-    var currentActive = actives[0];
-    if (currentActive)
-      currentActive.classList.remove("active");
 
-    if (currentActive !== this)
-      this.classList.add("active");
-  };
+function changeButtonLng(event) {
+  lngButton.forEach((btn) => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  lngButtons.classList.remove('active');
+ }
+lngButtons.addEventListener('click', changeButtonLng);
+
+if (localStorage.getItem('lang') != null) {
+  let lang = localStorage.getItem('lang');
+  getTranslate(lang)
+}
+
+const switchBtn = document.querySelector('.theme-switch');
+const switchTheme = document.querySelectorAll('[data-theme]');
+
+const theme = 'light-theme';
+switchBtn.addEventListener('click', () => {
+  switchTheme.forEach((element) => element.classList.toggle('light-theme'));
+  localStorage.setItem('theme', theme);
+});
+
+
+if (localStorage.getItem('theme') != null) {
+  let theme = localStorage.getItem('theme');
+  switchTheme.forEach((element) => element.classList.toggle(theme));
 }
 
 
