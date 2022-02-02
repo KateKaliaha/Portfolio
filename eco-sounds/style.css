@@ -77,3 +77,23 @@ nav {
     filter: invert(26%) sepia(15%) saturate(638%)
     hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    min-height: 280px;
+    background-image: url('./assets/img/forest.jpg');
+    background-size: cover;
+}
+
+.play {
+    width: 160px;
+    height: 160px;
+    background-image: url('./assets/svg/play.svg');
+    background-size: contain;
+    background-color: transparent;
+    border: 0;
+    transition: 0.3s;
+}
