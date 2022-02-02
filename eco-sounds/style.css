@@ -6,6 +6,8 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -97,3 +99,43 @@ nav {
     border: 0;
     transition: 0.3s;
 }
+
+.footer {
+    background-color: #000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+.footer-data {
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    padding-right: 20px;
+}
+
+.github-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: .3s;
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/svg/rss.svg');
+    transition: .3s;
+}
+
