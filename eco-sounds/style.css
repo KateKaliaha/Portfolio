@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2;  
+}
+header {
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+
+.header-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/svg/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: block;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2;
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    list-style: none;
+}
+
+.nav-item.active {
+    filter: invert(26%) sepia(15%) saturate(638%)
+    hue-rotate(7deg) brightness(92%) contrast(87%);
+}
