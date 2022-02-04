@@ -67,6 +67,13 @@ nav {
     cursor: pointer;
 }
 
+.nav-item:hover,
+.github-link:hover,
+.rss-logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%)
+    hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
 .nav-list {
     display: flex;
     justify-content: space-between;
@@ -98,6 +105,14 @@ nav {
     background-color: transparent;
     border: 0;
     transition: 0.3s;
+}
+
+.play:hover {
+    filter: brightness(.85);
+}
+
+.pause {
+    background-image: url(./assets/svg/pause.svg);
 }
 
 .footer {
