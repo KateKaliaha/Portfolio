@@ -105,6 +105,7 @@ nav {
     background-color: transparent;
     border: 0;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .play:hover {
