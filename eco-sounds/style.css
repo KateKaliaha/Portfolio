@@ -122,9 +122,9 @@ nav {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    width: calc(100% - 40px);
+    /* width: calc(100% - 40px); */
     max-width: 1440px;
     margin: 0 auto;
     padding: 5px 20px;
@@ -132,7 +132,9 @@ nav {
 
 .footer-data {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: 0;
 }
 
 .copyright {
