@@ -30,6 +30,7 @@ const img = document.querySelector('.picture');
 function changeButtonLng(event) {
     lngButton.forEach((btn) => btn.classList.remove('active'));
     event.target.classList.add('active');
+    lngButtons.classList.remove('active')
 }
 
 lngButtons.addEventListener('click', changeButtonLng);
@@ -38,7 +39,7 @@ async function getQuotes() {
     const quotes = 'data.json';
     const res = await fetch(quotes);
     const data = await res.json(); 
-    console.log(data);
+    // console.log(data);
     showData(data)
 }
 
@@ -101,3 +102,6 @@ lang = localStorage.getItem('lang')
 
 // console.log(localStorage.getItem('lang'))
 
+
+
+console.log('Ваша отметка - 65 балла(ов)\n1) на странице есть цитата и кнопка для смены цитаты — 5 балл(а)\n2) в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс — 5 балл(а)\n3) При загрузке страницы приложения отображается рандомная цитата — 10 балл(а)\n4) При перезагрузке страницы цитата обновляется (заменяется на другую) — 10 балл(а)\n5) Есть кнопка, при клике по которой цитата обновляется (заменяется на другую) — 10 балл(а)\n6) Смена цитаты сопровождается любым другим эффектом, например, изменяется изображение или меняется фоновый цвет страницы, или проигрывается звук и т.д — 10 балл(а)\n7) Можно выбрать один из двух языков отображения цитат: en/ru или en/be — 10 балл(а)\n8) Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения — 5 балл(а)')
