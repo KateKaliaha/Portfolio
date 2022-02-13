@@ -9,6 +9,8 @@ const button = document.querySelector('.btn');
 const url = 'https://type.fit/api/quotes'
 let lang = 'en'
 
+getData()
+
 async function getData() {
     const res = await fetch(url);
     const data = await res.json();
