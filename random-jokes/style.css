@@ -11,7 +11,7 @@
 }
 
 html {
-    max-width: 1440px;
+    /* max-width: 1440px; */
 
 }
 
@@ -190,7 +190,7 @@ img {
     display: flex;
     justify-content: left;
     align-items: center;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     background-color: rgba(133, 162, 170, 0.5);
     padding-right: 20px;
 }
