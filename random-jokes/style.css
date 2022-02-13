@@ -15,12 +15,18 @@ html {
 
 }
 
+header {
+   
+    background-color: rgba(133, 162, 170, 0.5);
+    height: 10vh;
+    
+}
+
 .header {
     display: flex;
     justify-content: flex-end;
-    background-color: rgba(133, 162, 170, 0.5);
-    height: 10vh;
     align-items: center;
+    height: 10vh;
 }
 
 .lng {
@@ -37,20 +43,27 @@ html {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
+  margin-right: 5px;
+  transition: transform 1s;   
 }
-
-.lng:hover,
-.lng:active,
-.lng:focus {
+.active {
     background: rgba(176, 227, 240, 0);
 	color: rgb(36, 56, 61);
 	box-shadow: inset 0 0 0 1px #526d7a;
     transition: 0.3s;
 }
+.lng:hover,
+.lng:focus {
+    background: rgba(176, 227, 240, 0);
+	color: rgb(36, 56, 61);
+	box-shadow: inset 0 0 0 1px #526d7a;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
 
 .ru {
     margin-right: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 body {
     font-family: "Open-sans", sans-serif;
@@ -74,8 +87,41 @@ body {
 
 img {
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
+.picture {
+    width: 200px;
+    height: 300px;
+   border: none;
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
+.picture.active {
+    animation: rote;
+    transform: rotate(360deg);
+    transition: 1s;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  @keyframes rote {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rote {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 .btn {
     text-transform: uppercase;
@@ -92,17 +138,26 @@ img {
     border-radius: 0.5rem;
     font-weight: bold;
 }
+.btn {
+  
+    transition: transform 3s;   
+    }
+
 
 .btn:hover {
     /* color: rgb(59, 80, 80); */
     background: rgba(133, 162, 170, 0.5);
 	color: rgb(36, 56, 61);
 	box-shadow: inset 0 0 0 0px #526d7a;
-    transition: 0.3s;
+    transition: 0.8s;
 }
 
+    .btn:active {
+        transform: scale(1.2);
+    }
+
 .jokes {
-    width: 800px;
+    width: 1000px;
     padding-top: 30px;
     color:rgb(59, 80, 80);
     margin: o auto;
@@ -111,7 +166,7 @@ img {
     align-items: center;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .author {
