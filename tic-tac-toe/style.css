@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Appetite';
+    src: url("./assets/fonts/appetite.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Sunday';
+    src: url("./assets/fonts/sunday.ttf");
+    font-weight: 900;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+
+html {
+    max-width: 1440px;
+    min-width: 420px;
+}
+
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(221, 125, 16, 0.6);
+    font-family: "Sunday", sans-serif;
+    font-size: 40px;
+    line-height: 2;
+    color: rgb(22, 15, 13);
+}
+
+.main {
+    height: 80vh;
+    font-family: "Appetite", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(22, 15, 13);
+}
+
+
+.footer-container {
+    height: 10vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-right: 20px;
+    margin: 0 auto;
+    background: rgba(221, 125, 16, 0.6);
+    font-family: "Appetite", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(22, 15, 13);
+}
+
+.footer-data {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.footer-data p {
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.github-link {
+   
+
+}
+
+.rss-logo {
+    background: url("./assets/rss.svg");
+    width: 135px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
+}
+
+a:hover,
+a:focus {
+    color: rgb(59, 80, 80);
+}
+
+.rss-logo:hover {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(7%) saturate(1405%) hue-rotate(131deg) brightness(89%) contrast(85%);
+}
