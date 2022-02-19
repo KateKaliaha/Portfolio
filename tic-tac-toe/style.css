@@ -26,7 +26,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(221, 125, 16, 0.6);
+    background: rgba(240, 128, 128, 0.6);
     font-family: "Sunday", sans-serif;
     font-size: 40px;
     line-height: 2;
@@ -38,8 +38,90 @@ html {
     font-family: "Appetite", sans-serif;
     font-size: 20px;
     line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.result {
+    height: 50px;
+    color: rgb(22, 15, 13);
+}
+
+.game {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+  
+}
+.field:nth-child(1),
+.field:nth-child(2),
+.field:nth-child(3),
+.field:nth-child(4),
+.field:nth-child(5),
+.field:nth-child(6) {
+  border-bottom: 8px solid rgba(240, 128, 128, 0.6);
+}
+
+.field:nth-child(2),
+.field:nth-child(5),
+.field:nth-child(8) {
+  border-left: 8px solid rgba(240, 128, 128, 0.6);
+  border-right: 8px solid rgba(240, 128, 128, 0.6);
+}
+
+.field:nth-child(1),
+.field:nth-child(4),
+.field:nth-child(7) {
+    padding-left: 8px;
+}
+
+.field:nth-child(3),
+.field:nth-child(6),
+.field:nth-child(9) {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.field {
+    width: 120px;
+    height: 120px;
+    outline: none;
+    cursor: pointer;
+}
+
+.new-game {
+    border: none;
+    color: rgb(22, 15, 13);
+    background:  rgba(240, 128, 128, 0.6);
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 3s;   
+}
+
+
+.new-game:active,
+.new-game:hover {
+    transform: scale(1.2);
+}
+
+.new-game:hover {
+    background: rgba(255, 192, 203, 0.7);
+	box-shadow: inset 0 0 0 2px  rgba(240, 128, 128, 0.6);
+    transition: 0.8s;
+    color: rgb(59, 80, 80);
+}
+
+.active {
+    background: rgba(196, 184, 83, 0.747);
+}
 
 a {
     text-decoration: none;
@@ -56,7 +138,7 @@ a {
     align-items: center;
     padding-right: 20px;
     margin: 0 auto;
-    background: rgba(221, 125, 16, 0.6);
+    background: rgba(240, 128, 128, 0.6);
     font-family: "Appetite", sans-serif;
     font-size: 20px;
     line-height: 1.5;
@@ -97,3 +179,34 @@ a:focus {
 .rss-logo:hover {
     filter: brightness(0) saturate(100%) invert(29%) sepia(7%) saturate(1405%) hue-rotate(131deg) brightness(89%) contrast(85%);
 }
+
+.zero {
+    width: 100%;
+    height: 100%;
+    stroke-dasharray: 267;
+    stroke-dashoffset: 267;
+    animation: draw 1s forwards;
+}
+
+.cross {
+    width: 100%;
+    height: 100%;
+}
+
+.first {
+    stroke-dasharray: 109;
+    stroke-dashoffset: 109;
+    animation: draw 0.6s forwards;
+}
+
+.second {
+    stroke-dasharray: 109;
+    stroke-dashoffset: 109;
+    animation: draw 0.6s 0.6s forwards;
+}
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
