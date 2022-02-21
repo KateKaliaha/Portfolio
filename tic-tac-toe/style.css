@@ -39,14 +39,21 @@ html {
     font-size: 20px;
     line-height: 1.5;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
 .result {
-    height: 50px;
+    height: 60px;
     color: rgb(22, 15, 13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    line-height: 2;
+    margin-top: 40px;
+    font-family: "Sunday", sans-serif;;
 }
 
 .game {
@@ -87,7 +94,6 @@ html {
     padding-right: 4px;
 }
 
-
 .field {
     width: 120px;
     height: 120px;
@@ -103,9 +109,10 @@ html {
     padding: 10px 20px;
     border-radius: 40px;
     cursor: pointer;
-    transition: transform 3s;   
+    transition: transform 3s;
+    height: 60px;   
+    margin-bottom: 20px;
 }
-
 
 .new-game:active,
 .new-game:hover {
@@ -120,7 +127,7 @@ html {
 }
 
 .active {
-    background: rgba(196, 184, 83, 0.747);
+    background:rgba(255, 192, 203, 0.3);
 }
 
 a {
@@ -129,7 +136,6 @@ a {
     transition: 0.3s;
     color: rgb(22, 15, 13);
 }
-
 
 .footer-container {
     height: 10vh;
@@ -154,11 +160,6 @@ a {
 .footer-data p {
     padding-left: 10px;
     padding-right: 10px; 
-}
-
-.github-link {
-   
-
 }
 
 .rss-logo {
@@ -208,5 +209,27 @@ a:focus {
     100% {
         stroke-dashoffset: 0;
     }
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+   position: absolute;
+   top: 200px;
+   right: 70px;
+   z-index: 100;
+}
+
+.figure,
+.steps-winner {
+    font-size: 30px;  
+}
+
+li {
+   list-style-type: none; 
+}
+
+ul {
+ padding-right: 30px;
 }
 
