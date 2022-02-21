@@ -16,11 +16,6 @@
     margin: 0 auto;
 }
 
-html {
-    max-width: 1440px;
-    min-width: 420px;
-}
-
 .header {
     height: 10vh;
     display: flex;
@@ -214,10 +209,10 @@ a:focus {
 .score {
     display: flex;
     flex-direction: row;
-   position: absolute;
-   top: 200px;
-   right: 70px;
-   z-index: 100;
+    position: absolute;
+    top: 200px;
+    right: 70px;
+    z-index: 100;
 }
 
 .figure,
