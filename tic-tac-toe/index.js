@@ -24,28 +24,41 @@ let itemSteps = document.querySelectorAll('.item-steps')
 
 
 function StepCross(target) {
-target.innerHTML = cross;
-target.classList.add('x');
-count++;
-// localStorage.setItem('count', count);
-let crossAudio = new Audio('./assets/audio/cross.mp3');
-crossAudio.play();
+    target.classList.add('x');
+    count++;
+    target.innerHTML = cross;
+    // localStorage.setItem('count', count);
+    let crossAudio = new Audio('./assets/audio/cross.mp3');
+    crossAudio.play();
 }
+
 
 function StepZero(target) {
-target.innerHTML = zero;
-target.classList.add('o');
-count++;
-// localStorage.setItem('count', count);
-let zeroAudio = new Audio('./assets/audio/zero.mp3')
-zeroAudio.play();
+    target.classList.add('o');
+    count++;
+        target.innerHTML = zero;
+        // localStorage.setItem('count', count);
+        let zeroAudio = new Audio('./assets/audio/zero.mp3')
+        zeroAudio.play();
 }
 
+// function start(e) {
+//         if (!step) StepCross(e.target);
+//         else StepZero(e.target);
+//         step = !step;
+//         win()
+// }
+
 function start(e) {
-    if (!step) StepCross(e.target);
-    else StepZero(e.target);
-    step = !step;
-    win();
+        if (e.target.classList.contains('field')) {
+        if(!step) {
+            StepCross(e.target);
+        }
+        
+        else StepZero(e.target);
+        step = !step;
+        win()
+    }
 }
 
 function newGame() {
